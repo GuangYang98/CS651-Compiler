@@ -1,0 +1,69 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<18>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<4>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types):
+   At first I try to add the code into the Paser.java and Type.java, but there
+   is still bugs and the output is not right. Eventually, I discover there is
+   a descriptorFor() function which need to insert the class descriptor. But,
+   there is no instruction about it. I search on Google and find this link:
+   https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-4.html#jvms-4.3.2
+   The lack of instruction made me struggle for a long time in this question.
+
+   Problem 2 (Operators): 
+   Just follow the assignment to insert the code to different operator class.
+   The || operator take me a while to figure out how to implement the short-
+   circuited logic.
+
+   Problem 3 (Conditional Expression): 
+   This problem is much harder, I have to manually construct the class from
+   JExpression to handle the conditionalExpression. However, for this project,
+   we don't need to implement the codegen function. Or, I will spend more
+   time on it.
+
+   Problem 4 (Switch Statement): 
+   This problem is pretty hard. There is rarely any instruction. And I have
+   to mimic how the code is orangized to build up some class to deal with the
+   switchBlockStatementGroup and output something as instructor's AST. Luckily,
+   right now, we don't need to do the codegen part. OR, it will be a disaster.
+
+   Problem 5 (Do-While Statement): 
+   This one is not hard, I can reuse a lot of code from the while statement.
+
+   Problem 6 (For Statement):
+   After finishing the problem above, I have already gained some experience on
+   how to write the code to process these statements. I use some time to finish
+   this part.
+
+   Problem 7 (Exception Handlers):
+   At first, I only implement the throw support code, and then the result failed.
+   Then I found out there is also a throws resevered word. Then I need to
+   code something to support the memberDeclaration.
+
+   Problem 8 (Interface Type Declaration): 
+   I just mimic the code form the classDeclaration and finished the implement of
+   interfaceDeclaration. However, I didn't realize that the classDeclaration
+   misses the implements support. After finish it, the result seems good.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Junhong Lin        husband      Taught me how to code in Java
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   

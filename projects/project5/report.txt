@@ -1,0 +1,69 @@
+1. Enter the number of hours it took you to complete the project between
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<<40>>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between the <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<5>>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Long and Double Basic Types): 
+   This problem is pretty tricky. Although I add the code into codegen function
+   to support the calculation of Long and Double types, the compiled program
+   still failed to run properly. It said "Register pair 1/2 contains wrong type".
+   Finally, after google this error, I realized that there is something wrong
+   with the register offset setting -- Long and Double would occupy two registers.
+   I fix this error when I add another offset in register for these two types.
+
+   Problem 2 (Operators):
+   This problem takes some time to finish. The trick is that when faces with
+   Long and Double types, you need to do a conversion to make the operation run
+   properly.
+   
+   Problem 3 (Conditional Expression):
+   This one is OK. I only need to add a branch instruction to control the flow.
+
+   Problem 4 (Switch Statement): 
+   This one is so hard!! I need to consider all the situation and choose which
+   one of SWITCH instruction I need to use. To finish this problem, I even
+   modify my previous parser code to fit in the codegen demand. I add some break
+   support in order to make this Switch Statement reasonable. And I also add a
+   JCaseLabel class to fulfill the demand that I need to know the label code
+   during code generation.
+
+   Problem 5 (Do-while Statement):
+   This one is easy. I just mimic how the code is organized in JWhileStatement,
+   and easily built up the codegen function.
+
+   Problem 6 (For Statement):
+   This one is trivial after all the problems above. All I need to do is to 
+   codegen for each part in the for loop and use a branch instruction to control
+   the program flow.
+
+   Problem 7 (Interface Type Declarations): ...
+
+   Problem 8 (Exception Handlers): 
+   This one is very hard! I summarize the instruction pattern from the testbook
+   exercise and try to mimic it in my code. It's pretty tricky that the
+   Exception e in catch clause is actually a variable declaration. It took me
+   much time to figure it out, implement and debug the code.
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   ...                ...          ...
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   There is too few instruction on how to implement the majority of code in this
+   problem set. If there are more instructions on what the code structure
+   should be, and hints about what we should implement, it would be better.
